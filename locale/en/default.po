@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pi module\n"
-"POT-Creation-Date: 2016-10-08 13:38+0330\n"
+"POT-Creation-Date: 2016-10-08 13:51+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Pi\n"
@@ -69,11 +69,12 @@ msgstr ""
 msgid "Please type the word."
 msgstr ""
 
-#: src/Form/SubmitForm.php:120
+#: src/Form/SubmitForm.php:120 template/front/list.phtml:8
+#: template/front/list.phtml:11
 msgid "Submit"
 msgstr ""
 
-#: template/admin/list-index.phtml:10 template/front/list.phtml:3
+#: template/admin/list-index.phtml:10 template/front/list.phtml:5
 msgid "List of texts"
 msgstr ""
 

@@ -1,6 +1,16 @@
 <?php $this->css($this->assetModule('css/front.css')); ?>
 <div class="clearfix">
-    <h1><?php _e('List of texts'); ?></h1>
+    <div class="clearfix row">
+        <div class="col-md-3">
+            <h1><?php _e('List of texts'); ?></h1>
+        </div>
+        <div class="col-md-9">
+            <a class="btn btn-success btn-xs" title="<?php _e('Submit'); ?>" href="<?php Pi::url($this->url('', array(
+                'controller' => 'submit',
+                'action' => 'index',
+            ))); ?>"><?php _e('Submit'); ?></a>
+        </div>
+    </div>
     <div class="clearfix media-list">
         <?php foreach ($list as $text) { ?>
             <div class="media">
