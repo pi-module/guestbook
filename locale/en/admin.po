@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pi module\n"
+"POT-Creation-Date: 2016-10-08 13:38+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Pi\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _a;_t\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: config/block.php:16 config/navigation.php:16 config/page.php:17
+#: config/permission.php:34
+msgid "List of texts"
+msgstr ""
+
+#: config/block.php:22
+msgid "Number"
+msgstr ""
+
+#: config/config.php:16
+msgid "Admin"
+msgstr ""
+
+#: config/config.php:20
+msgid "Show"
+msgstr ""
+
+#: config/config.php:28 config/config.php:37
+msgid "Perpage"
+msgstr ""
+
+#: config/module.php:16 config/module.php:17
+msgid "Guest book"
+msgstr ""
+
+#: config/page.php:26
+msgid "Index page"
+msgstr ""
+
+#: config/page.php:32 config/permission.php:24
+msgid "Submit page"
+msgstr ""
+
+#: config/permission.php:17
+msgid "Global public resource"
+msgstr ""

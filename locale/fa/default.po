@@ -1,0 +1,493 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pi contact module\n"
+"POT-Creation-Date: 2016-10-08 13:39+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Pi\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Controller/Admin/ListController.php:93
+msgid "Text data saved successfully."
+msgstr "اطلاعات متن با موفقیت ذخیره شد"
+
+#: src/Controller/Admin/ListController.php:105
+msgid "Manage text"
+msgstr "مدیریت متن"
+
+#: src/Controller/Admin/ListController.php:124
+#, php-format
+msgid "%s text accept successfully"
+msgstr "%s با موفقیت تایید شد"
+
+#: src/Controller/Admin/ListController.php:129
+#, php-format
+msgid "Error in accept %s text"
+msgstr "خطا در تایید %s"
+
+#: src/Controller/Admin/ListController.php:135
+msgid "Please select text"
+msgstr "لطفا یک متن انتخاب نمایید"
+
+#: src/Controller/Front/SubmitController.php:49
+msgid "Your text submitd and will be publish after review"
+msgstr "متن شما با موفقیت در سیستم ثبت شده است، ما بعد از بررسی آن را منتشر می کنیم."
+
+#: src/Controller/Front/SubmitController.php:64
+msgid "Submit new text"
+msgstr "ارسال متن جدید"
+
+#: src/Form/SubmitForm.php:47
+msgid "Title"
+msgstr "عنوان"
+
+#: src/Form/SubmitForm.php:58
+msgid "Email"
+msgstr "ایمیل"
+
+#: src/Form/SubmitForm.php:69
+msgid "Name"
+msgstr "نام"
+
+#: src/Form/SubmitForm.php:80
+msgid "Phone"
+msgstr "تلفن"
+
+#: src/Form/SubmitForm.php:91
+msgid "Text"
+msgstr "متن"
+
+#: src/Form/SubmitForm.php:106
+msgid "Please type the word."
+msgstr "لطفا متن رو به رو را تایپ کنید"
+
+#: src/Form/SubmitForm.php:120
+msgid "Submit"
+msgstr "ارسال"
+
+#: template/admin/list-index.phtml:10 template/front/list.phtml:3
+msgid "List of texts"
+msgstr "فهرست مطالب ارسالی"
+
+#: template/admin/list-index.phtml:13
+msgid "ID"
+msgstr "شناسه"
+
+#: template/admin/list-index.phtml:14
+msgid "Information"
+msgstr "اطلاعات"
+
+#: template/admin/list-index.phtml:15
+msgid "Action"
+msgstr "عملکرد"
+
+#: template/admin/list-index.phtml:36 template/admin/list-index.phtml:38
+msgid "Edit"
+msgstr "ویرایش"
+
+#: template/admin/list-index.phtml:44 template/admin/list-index.phtml:68
+msgid "Reject"
+msgstr "رد"
+
+#: template/admin/list-index.phtml:49 template/admin/list-index.phtml:73
+msgid "Accept"
+msgstr "تایید"
+
+#: template/admin/list-index.phtml:62
+msgid "Accept text in process"
+msgstr "تایید مطلب در حال اجرا است"
+
+#~ msgid "List of departments"
+#~ msgstr "فهرست بخش ها"
+
+#~ msgid "Department data saved successfully."
+#~ msgstr "اطلاعات بخش با موفقیت ذخیره شد"
+
+#~ msgid "Add a Department"
+#~ msgstr "ایجاد بخش"
+
+#~ msgid "Your selected department deleted"
+#~ msgstr "بخش انتخاب شده حذف شد"
+
+#~ msgid "Please select department"
+#~ msgstr "لطفا یک بخش را انتخاب نمایید"
+
+#~ msgid "Please select message"
+#~ msgstr "لطفا یک پیام انتخاب کنید"
+
+#~ msgid "Your reply Send and saved successfully"
+#~ msgstr "پاسخ شما با موفقیت ارسال و ذخیره شد"
+
+#~ msgid "Re : %s"
+#~ msgstr "پاسخ به : %s"
+
+#~ msgid "Reply to %s"
+#~ msgstr "پاسخ به %s"
+
+#~ msgid "Your selected message deleted"
+#~ msgstr "پیام انتخابی شما حذف شد"
+
+#~ msgid "You can prune all old message, from selected department."
+#~ msgstr "شما میتوانید تمام پیام های قدیمی را از بخش انتخابی حذف کنید"
+
+#~ msgid "<strong>%s</strong> old messages removed"
+#~ msgstr "<strong>%s</strong> پیام قدیمی حذف شد"
+
+#~ msgid "Error in pruned messages."
+#~ msgstr "خطا در حذف اطلاعات قدیمی"
+
+#~ msgid "Tools"
+#~ msgstr "ابزار"
+
+#~ msgid "Message correctly Send, a confirmation has just been sent to you by email"
+#~ msgstr "پیام شما با موفقیت ارسال شد ، یک ایمیل تایید فقط جهت اطلاع ، برای شما ارسال شد"
+
+#~ msgid "Contact Us"
+#~ msgstr "تماس با ما"
+
+#~ msgid "Your selected department not active"
+#~ msgstr "بخش انتخاب شده فعال نیست"
+
+#~ msgid "Your Contact send and saved successfully"
+#~ msgstr "پیام شما با موفقیت ارسال و ذخیره شد"
+
+#~ msgid "Send information not valid"
+#~ msgstr "اطلاعات ارسال شده صحیح نیست"
+
+#~ msgid "Nothing send"
+#~ msgstr "هیچ چیز ارسال نشد"
+
+#~ msgid "Subject"
+#~ msgstr "موضوع"
+
+#~ msgid "Department"
+#~ msgstr "بخش"
+
+#~ msgid "Organization"
+#~ msgstr "سازمان"
+
+#~ msgid "Homepage"
+#~ msgstr "وب سایت"
+
+#~ msgid "Location"
+#~ msgstr "شهر"
+
+#~ msgid "Address"
+#~ msgstr "نشانی"
+
+#~ msgid "Message"
+#~ msgstr "پیام"
+
+#~ msgid "Slug"
+#~ msgstr "اسلاگ"
+
+#~ msgid "Status"
+#~ msgstr "وضعیت"
+
+#~ msgid "Published"
+#~ msgstr "منتشر شده"
+
+#~ msgid "Pending review"
+#~ msgstr "در حال بررسی"
+
+#~ msgid "Draft"
+#~ msgstr "پیش نویس"
+
+#~ msgid "Private"
+#~ msgstr "خصوصی"
+
+#~ msgid "Expired"
+#~ msgstr "باطل شده"
+
+#~ msgid "All contacts Before"
+#~ msgstr "همه تماس های قبل از"
+
+#~ msgid "Only remove Admin answers"
+#~ msgstr "فقط حذف پاسخ های مدیر"
+
+#~ msgid "To Name"
+#~ msgstr "به نام"
+
+#~ msgid "To Email"
+#~ msgstr "به ایمیل"
+
+#~ msgid "Default department"
+#~ msgstr "فرم پیش فرض"
+
+#~ msgid "default"
+#~ msgstr "پیش فرض"
+
+#~ msgid "Default department added."
+#~ msgstr "بخش پیش فرض اضافه شد"
+
+#~ msgid "Add Department"
+#~ msgstr "ایجاد بخش"
+
+#~ msgid "View"
+#~ msgstr "نمایش"
+
+#~ msgid "Delete"
+#~ msgstr "حذف"
+
+#~ msgid "Back"
+#~ msgstr "برگشت"
+
+#~ msgid "Author"
+#~ msgstr "ارسال کننده"
+
+#~ msgid "Create"
+#~ msgstr "ایجاد"
+
+#~ msgid "Answered"
+#~ msgstr "پاسخ داده شده"
+
+#~ msgid "Reply"
+#~ msgstr "پاسخ"
+
+#~ msgid "Main Message is"
+#~ msgstr "پیام اصلی "
+
+#~ msgid "Auther"
+#~ msgstr "ارسال کننده"
+
+#~ msgid "Platform"
+#~ msgstr "پلت فرم"
+
+#~ msgid "Ip"
+#~ msgstr "آی پی"
+
+#~ msgid "Your reply send successfully but dont saved in DB"
+#~ msgstr "پاسخ شما با موفقیت ارسال شد ولی در پایگاه داده ها ذخیره نشد"
+
+#~ msgid "Error in send reply as Email"
+#~ msgstr "خطا در ارسال پاسخ به صورت ایمیل"
+
+#~ msgid "You can answer to this message"
+#~ msgstr "شما میتوانید به این پیام پاسخ بدهید"
+
+#~ msgid "Finish"
+#~ msgstr "پایان"
+
+#~ msgid "Please submit contact form"
+#~ msgstr "لطفا فرم تماس را تکمیل و ارسال فرمایید"
+
+#~ msgid "Twitter"
+#~ msgstr "تویتر"
+
+#~ msgid "Facebook"
+#~ msgstr "فیسبوک"
+
+#~ msgid "Google"
+#~ msgstr "گوگل"
+
+#~ msgid "YouTube"
+#~ msgstr "یوتیوب"
+
+#~ msgid "Pinterest"
+#~ msgstr "وینترست"
+
+#~ msgid "Instagram"
+#~ msgstr "اینستاگرام"
+
+#~ msgid "Tumblr"
+#~ msgstr "تامبلر"
+
+#~ msgid "Trello"
+#~ msgstr "ترلو"
+
+#~ msgid "LinkedIn"
+#~ msgstr "لینک این"
+
+#~ msgid "Github"
+#~ msgstr "گیت هاب"
+
+#~ msgid "Rss"
+#~ msgstr "خوراک"
+
+#~ msgid "Contact us form"
+#~ msgstr "فرم تماس با ما"
+
+#~ msgid "Select Department Form contact us"
+#~ msgstr "انتخاب یک بخش برای تماس"
+
+#~ msgid "Submit contact form finished"
+#~ msgstr "ارسال فرم تماس با موفقیت به پایان رسید"
+
+#~ msgid "Select department"
+#~ msgstr "انتخاب بخش"
+
+#~ msgid "Contact"
+#~ msgstr "پیام"
+
+#~ msgid "Manage Contacts"
+#~ msgstr "مدیریت پیام ها"
+
+#~ msgid "Admin"
+#~ msgstr "مدیریت"
+
+#~ msgid "HomePage"
+#~ msgstr "صفحه اصلی"
+
+#~ msgid "Form"
+#~ msgstr "فرم"
+
+#~ msgid "Google Map"
+#~ msgstr "نقشه گوگل"
+
+#~ msgid "Social Network"
+#~ msgstr "شبکه های اجتماعی"
+
+#~ msgid "Perpage"
+#~ msgstr "تعداد در هر صفحه"
+
+#~ msgid "List of Departments"
+#~ msgstr "فهرست بخش ها"
+
+#~ msgid "Show breadcrumbs"
+#~ msgstr "نمایش ناوبری"
+
+#~ msgid "Top text"
+#~ msgstr "متن بالا"
+
+#~ msgid "Bottom text"
+#~ msgstr "متن پایین"
+
+#~ msgid "Side text"
+#~ msgstr "متن کنار"
+
+#~ msgid "Finish text"
+#~ msgstr "متن پایان"
+
+#~ msgid "show Department"
+#~ msgstr "نمایش بخش"
+
+#~ msgid "show Organization"
+#~ msgstr "نمایش سازمان"
+
+#~ msgid "required Organization"
+#~ msgstr "سازمان اجباری باشد"
+
+#~ msgid "show Homepage"
+#~ msgstr "نمایش وب سایت"
+
+#~ msgid "required Homepage"
+#~ msgstr "وب سایت اجباری باشد"
+
+#~ msgid "show Location"
+#~ msgstr "نمایش شهر"
+
+#~ msgid "required Location"
+#~ msgstr "شهر اجباری باشد"
+
+#~ msgid "show Phone"
+#~ msgstr "نمایش تلفن"
+
+#~ msgid "required Phone"
+#~ msgstr "تلفن اجباری باشد"
+
+#~ msgid "show Address"
+#~ msgstr "نمایش آدرس"
+
+#~ msgid "required Address"
+#~ msgstr "آدرس اجباری باشد"
+
+#~ msgid "Use captcha"
+#~ msgstr "استفاده از کپچا"
+
+#~ msgid "Captcha just use for gust"
+#~ msgstr "استفاده از کپچا فقط برای کاربران مهمان"
+
+#~ msgid "Twitter account"
+#~ msgstr "حساب تویتر"
+
+#~ msgid "Twitter icon"
+#~ msgstr "آیکن تویتر"
+
+#~ msgid "Set icon url (Uploaded on your host) or leave empty to use default icon"
+#~ msgstr "لینک آیکن را واردکنید ( آیکن را در هاست خود بارگذاری کنید ) یا این گزینه را خالی بگذارید تا از آیکن پیش فرض استفاده شود"
+
+#~ msgid "Facebook account"
+#~ msgstr "حساب فیسبوک"
+
+#~ msgid "Facebook icon"
+#~ msgstr "آیکن فیسبوک"
+
+#~ msgid "Google plus account"
+#~ msgstr "حساب گوگل پلاس"
+
+#~ msgid "Google plus icon"
+#~ msgstr "آیکن گوگل پلاس"
+
+#~ msgid "YouTube account"
+#~ msgstr "حساب یوتیوب"
+
+#~ msgid "YouTube icon"
+#~ msgstr "آیکن یوتیوب"
+
+#~ msgid "Pinterest account"
+#~ msgstr "حساب پینترس"
+
+#~ msgid "Pinterest icon"
+#~ msgstr "آیکن پینترس"
+
+#~ msgid "LinkedIn account"
+#~ msgstr "حساب لینک این"
+
+#~ msgid "LinkedIn icon"
+#~ msgstr "آیکن لینک این"
+
+#~ msgid "Github account"
+#~ msgstr "حساب گیت هاب"
+
+#~ msgid "Github icon"
+#~ msgstr "آیکن گیت هاب"
+
+#~ msgid "Instagram account"
+#~ msgstr "حساب اینستاگرام"
+
+#~ msgid "Instagram icon"
+#~ msgstr "آیکن اینستاگرام"
+
+#~ msgid "Tumblr account"
+#~ msgstr "حساب تامبلر"
+
+#~ msgid "Tumblr icon"
+#~ msgstr "آیکن تامبلر"
+
+#~ msgid "Trello account"
+#~ msgstr "حساب ترلو"
+
+#~ msgid "Trello icon"
+#~ msgstr "آیکن ترلو"
+
+#~ msgid "Rss link"
+#~ msgstr "لینک خوراک"
+
+#~ msgid "Rss icon"
+#~ msgstr "آیکن خوراک"
+
+#~ msgid "Show Google Map"
+#~ msgstr "نمایش نقشه گوگل"
+
+#~ msgid "Longitude"
+#~ msgstr "طول جغرافیای (Longitude)"
+
+#~ msgid "Latitude"
+#~ msgstr "عرض جغرافیای (Latitude)"
+
+#~ msgid "Zoon"
+#~ msgstr "بزرگ نمایی"
+
+#~ msgid "Default Department"
+#~ msgstr "بخش پیش فرض"
+
+#~ msgid "Default"
+#~ msgstr "پیش فرض"
