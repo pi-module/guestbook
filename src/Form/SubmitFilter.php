@@ -20,6 +20,11 @@ class SubmitFilter extends InputFilter
 {
     public function __construct($option = array())
     {
+        // id
+        $this->add(array(
+            'name' => 'id',
+            'required' => false,
+        ));
         // title
         $this->add(array(
             'name' => 'title',

@@ -33,6 +33,13 @@ class SubmitForm extends BaseForm
 
     public function init()
     {
+        // id
+        $this->add(array(
+            'name' => 'id',
+            'attributes' => array(
+                'type' => 'hidden',
+            ),
+        ));
         // title
         $this->add(array(
             'name' => 'title',
