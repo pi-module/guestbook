@@ -1,15 +1,17 @@
 <?php $this->css($this->assetModule('css/front.css')); ?>
 <div class="clearfix">
     <div class="clearfix row">
-        <div class="col-md-3">
-            <h1><?php _e('List of texts'); ?></h1>
-        </div>
-        <div class="col-md-9">
-            <a class="btn btn-success btn-xs" title="<?php _e('Submit'); ?>" href="<?php Pi::url($this->url('', array(
-                'controller' => 'submit',
-                'action' => 'index',
-            ))); ?>"><?php _e('Submit'); ?></a>
-        </div>
+        <ul class="list-inline clearfix">
+            <li class="col-md-3">
+                <h1><?php _e('List of texts'); ?></h1>
+            </li>
+            <li class="col-md-9">
+                <a class="btn btn-success text-left pull-left" title="<?php _e('Submit'); ?>" href="<?php echo Pi::url($this->url('', array(
+                    'controller' => 'submit',
+                    'action' => 'index',
+                ))); ?>"><?php _e('Submit'); ?></a>
+            </li>
+        </ul>
     </div>
     <div class="clearfix media-list">
         <?php foreach ($list as $text) { ?>
