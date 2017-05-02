@@ -2,13 +2,15 @@
 <div class="clearfix">
 
     <?php if (!empty($config['text_description_index']) && isset($page) && $page == 1) { ?>
-        <div class="guestbookIndexDescription clearfix">
+        <div class="guestbook-description clearfix">
             <?php echo $config['text_description_index']; ?>
         </div>
     <?php } ?>
     <?php if ($config['show_form']) { ?>
-        <div class="clearfix row">
-            <?php echo $this->form($form); ?>
+        <div class="clearfix">
+            <div class="guestbook-form">
+                <?php echo $this->form($form); ?>
+            </div>
         </div>
     <?php } else { ?>
         <div class="clearfix row">
