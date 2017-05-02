@@ -41,7 +41,7 @@ class SubmitForm extends BaseForm
             ),
         ));
         // title
-        $this->add(array(
+        /* $this->add(array(
             'name' => 'title',
             'options' => array(
                 'label' => __('Title'),
@@ -50,7 +50,7 @@ class SubmitForm extends BaseForm
                 'type' => 'text',
                 'required' => true,
             )
-        ));
+        )); */
         // Email
         $this->add(array(
             'name' => 'email',
@@ -74,7 +74,7 @@ class SubmitForm extends BaseForm
             )
         ));
         // phone
-        $this->add(array(
+        /* $this->add(array(
             'name' => 'phone',
             'options' => array(
                 'label' => __('Phone'),
@@ -83,7 +83,7 @@ class SubmitForm extends BaseForm
                 'type' => 'text',
                 'required' => false,
             )
-        ));
+        )); */
         // text_description
         $this->add(array(
             'name' => 'text_description',

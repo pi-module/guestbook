@@ -26,7 +26,7 @@ class SubmitFilter extends InputFilter
             'required' => false,
         ));
         // title
-        $this->add(array(
+        /* $this->add(array(
             'name' => 'title',
             'required' => true,
             'filters' => array(
@@ -34,7 +34,7 @@ class SubmitFilter extends InputFilter
                     'name' => 'StringTrim',
                 ),
             ),
-        ));
+        )); */
         // email
         $this->add(array(
             'name' => 'email',
@@ -65,10 +65,10 @@ class SubmitFilter extends InputFilter
             'required' => true,
         ));
         // phone
-        $this->add(array(
+        /* $this->add(array(
             'name' => 'phone',
             'required' => false,
-        ));
+        )); */
         // text_description
         $this->add(array(
             'name' => 'text_description',
