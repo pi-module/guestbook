@@ -30,13 +30,12 @@
             <div class="media">
                 <div class="media-left col-md-2 text-center">
                     <?php echo $text['avatar']; ?>
-                    <p><?php echo $this->escape($text['name']); ?></p>
                 </div>
                 <div class="media-body">
                     <div class="clearfix">
-                        <h2 class="media-heading pull-left">
-                            <?php echo $this->escape($text['title']); ?>
-                        </h2>
+                        <h4 class="media-heading pull-left">
+                            <?php echo $this->escape($text['name']); ?>
+                        </h4>
                         <div class="media-heading-time pull-left">
                             <?php echo $this->escape($text['time_create_view']); ?>
                         </div>

@@ -77,9 +77,12 @@ class IndexController extends ActionController
                 'id', 'identity', 'name', 'email'
             );
             $user = Pi::user()->get($uid, $fields);
-            $user['uid'] = $uid;
-            $user['name'] = sprintf('%s ( %s )', $user['name'], $user['identity']);
-            $form->setData($user);
+            $values = array(
+                'uid' => $uid,
+                'name' => $user['name'],
+                'email' => $user['email'],
+            );
+            $form->setData($values);
         }
         // Set view
         $this->view()->setTemplate('list');
