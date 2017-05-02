@@ -1,18 +1,30 @@
 <?php $this->css($this->assetModule('css/front.css')); ?>
 <div class="clearfix">
-    <div class="clearfix row">
-        <ul class="list-inline clearfix">
-            <li class="col-md-3">
-                <h1><?php _e('List of texts'); ?></h1>
-            </li>
-            <li class="col-md-9">
-                <a class="btn btn-success text-left pull-left" title="<?php _e('Submit'); ?>" href="<?php echo Pi::url($this->url('', array(
-                    'controller' => 'submit',
-                    'action' => 'index',
-                ))); ?>"><?php _e('Submit'); ?></a>
-            </li>
-        </ul>
-    </div>
+
+    <?php if (!empty($config['text_description_index']) && isset($page) && $page == 1) { ?>
+        <div class="guestbookIndexDescription clearfix">
+            <?php echo $config['text_description_index']; ?>
+        </div>
+    <?php } ?>
+    <?php if ($config['show_form']) { ?>
+        <div class="clearfix row">
+            <?php echo $this->form($form); ?>
+        </div>
+    <?php } else { ?>
+        <div class="clearfix row">
+            <ul class="list-inline clearfix">
+                <li class="col-md-3">
+                    <h1><?php _e('List of texts'); ?></h1>
+                </li>
+                <li class="col-md-9">
+                    <a class="btn btn-success text-left pull-left" title="<?php _e('Submit'); ?>" href="<?php echo Pi::url($this->url('', array(
+                        'controller' => 'submit',
+                        'action' => 'index',
+                    ))); ?>"><?php _e('Submit'); ?></a>
+                </li>
+            </ul>
+        </div>
+    <?php } ?>
     <div class="clearfix media-list">
         <?php foreach ($list as $text) { ?>
             <div class="media">
@@ -21,9 +33,14 @@
                     <p><?php echo $this->escape($text['name']); ?></p>
                 </div>
                 <div class="media-body">
-                    <h2 class="media-heading">
-                        <?php echo $this->escape($text['title']); ?>
-                    </h2>
+                    <div class="clearfix">
+                        <h2 class="media-heading pull-left">
+                            <?php echo $this->escape($text['title']); ?>
+                        </h2>
+                        <div class="media-heading-time pull-left">
+                            <?php echo $this->escape($text['time_create_view']); ?>
+                        </div>
+                    </div>
                     <?php echo $text['text_description']; ?>
                 </div>
             </div>

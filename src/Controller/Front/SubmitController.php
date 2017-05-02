@@ -14,8 +14,6 @@ namespace Module\Guestbook\Controller\Front;
 
 use Pi;
 use Pi\Mvc\Controller\ActionController;
-use Pi\Paginator\Paginator;
-use Zend\Db\Sql\Predicate\Expression;
 use Module\Guestbook\Form\SubmitForm;
 use Module\Guestbook\Form\SubmitFilter;
 

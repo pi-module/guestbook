@@ -15,7 +15,7 @@ return array(
     'meta' => array(
         'title' => _a('Guest book'),
         'description' => _a('Guest book'),
-        'version' => '0.0.1',
+        'version' => '0.0.2',
         'license' => 'New BSD',
         'logo' => 'image/logo.png',
         'readme' => 'docs/readme.txt',

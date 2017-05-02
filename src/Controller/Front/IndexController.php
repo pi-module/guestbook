@@ -15,6 +15,8 @@ namespace Module\Guestbook\Controller\Front;
 use Pi;
 use Pi\Mvc\Controller\ActionController;
 use Pi\Paginator\Paginator;
+use Module\Guestbook\Form\SubmitForm;
+use Module\Guestbook\Form\SubmitFilter;
 use Zend\Db\Sql\Predicate\Expression;
 
 class IndexController extends ActionController
@@ -26,6 +28,8 @@ class IndexController extends ActionController
         $module = $this->params('module');
         // Get config
         $config = Pi::service('registry')->config->read($module);
+        // Get uid
+        $uid = Pi::user()->getId();
         // Get info
         $order = array('time_create DESC', 'id DESC');
         $limit = intval($config['show_perpage']);
@@ -36,10 +40,11 @@ class IndexController extends ActionController
         // Make list
         foreach ($rowset as $row) {
             $list[$row->id] = $row->toArray();
+            $list[$row->id]['time_create_view'] = _date($row->time_create);
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
             $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'large' , array(
                 'alt' => $row->name,
-                'class' => 'img-thumbnail'
+                'class' => 'img-circle'
             ));
         }
         // Set paginator
@@ -58,12 +63,30 @@ class IndexController extends ActionController
                 'action' => 'index',
             )),
         ));
+        // Set option
+        $option = array();
+        // Set form
+        $form = new SubmitForm('submit', $option);
+        $form->setAttribute('enctype', 'multipart/form-data');
+        $form->setAttribute('action', Pi::url($this->url('', array(
+            'controller' => 'submit',
+            'action' => 'index',
+        ))));
+        if ($uid > 0) {
+            $fields = array(
+                'id', 'identity', 'name', 'email'
+            );
+            $user = Pi::user()->get($uid, $fields);
+            $user['uid'] = $uid;
+            $user['name'] = sprintf('%s ( %s )', $user['name'], $user['identity']);
+            $form->setData($user);
+        }
         // Set view
         $this->view()->setTemplate('list');
         $this->view()->assign('list', $list);
         $this->view()->assign('paginator', $paginator);
         $this->view()->assign('config', $config);
-
-       
+        $this->view()->assign('page', $page);
+        $this->view()->assign('form', $form);
     }
 }

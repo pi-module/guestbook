@@ -40,5 +40,22 @@ return array(
             'filter' => 'number_int',
             'value' => 5
         ),
+        'show_form' => array(
+            'category' => 'show',
+            'title' => _a('Show submit form on list page'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 1
+        ),
+        // Texts
+        'text_description_index' => array(
+            'category' => 'head_meta',
+            'title' => _a('Description for index page'),
+            'description' => '',
+            'edit' => 'textarea',
+            'filter' => 'string',
+            'value' => ''
+        ),
     ),
 );
