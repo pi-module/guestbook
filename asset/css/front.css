@@ -1,3 +1,13 @@
 .media-list .media {
     border-bottom: 1px solid #ddd;
 }
+
+.media-heading-dot {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.media-heading-dot i {
+    font-size: 6px !important;
+}
