@@ -99,13 +99,10 @@ class SubmitForm extends BaseForm
         ));
         // captcha
         if (Pi::user()->getId() == 0) {
-            $this->add(array(
-                'name' => 'captcha',
-                'type' => 'captcha',
-                'options' => array(
-                    'label' => __('Please type the word.'),
-                )
-            ));
+            $captchaMode = $this->option['config']['captcha'];
+            if($captchaElement = Pi::service('form')->getReCaptcha($captchaMode)){
+                $this->add($captchaElement);
+            }
         }
         // security
         $this->add(array(

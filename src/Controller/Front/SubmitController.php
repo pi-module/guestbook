@@ -21,10 +21,16 @@ class SubmitController extends ActionController
 {
     public function indexAction()
     {
+        // Get page
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
         // Get uid
         $uid = Pi::user()->getId();
         // Set option
-        $option = array();
+        $option = array(
+            'config' => $config,
+        );
         // Set form
         $form = new SubmitForm('submit', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
