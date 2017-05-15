@@ -42,7 +42,7 @@ class IndexController extends ActionController
             $list[$row->id] = $row->toArray();
             $list[$row->id]['time_create_view'] = _date($row->time_create);
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
-            $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'medium' , array(
+            $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'normal' , array(
                 'alt' => $row->name,
                 'class' => 'img-circle'
             ));
