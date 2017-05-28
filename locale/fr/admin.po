@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pi module\n"
+"POT-Creation-Date: 2017-05-28 13:16+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Pi\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _a;_t\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: config/block.php:16 config/navigation.php:16 config/page.php:17
+#: config/permission.php:34
+msgid "List of texts"
+msgstr "Liste des témoignages postés"
+
+#: config/block.php:22
+msgid "Number"
+msgstr "Nombre"
+
+#: config/config.php:16
+msgid "Admin"
+msgstr "Admin"
+
+#: config/config.php:20
+msgid "Show"
+msgstr "Afficher"
+
+#: config/config.php:24
+msgid "Form"
+msgstr "Formulaire"
+
+#: config/config.php:32 config/config.php:41
+msgid "Perpage"
+msgstr "Par page"
+
+#: config/config.php:49
+msgid "Show submit form on list page"
+msgstr "Afficher le bouton soumettre sur la page Liste"
+
+#: config/config.php:57
+msgid "Use CAPTCHA"
+msgstr "Utiliser le CAPTCHA"
+
+#: config/config.php:58
+msgid "Captcha just use for guest"
+msgstr "Captcha seulement pour les invités"
+
+#: config/config.php:63
+msgid "No captcha"
+msgstr "Pas de captcha"
+
+#: config/config.php:64
+msgid "Standard captcha"
+msgstr "Captcha Standard"
+
+#: config/config.php:65
+msgid "New re-captcha"
+msgstr "New re-captcha"
+
+#: config/config.php:76
+msgid "Description for index page"
+msgstr "Description page index"
+
+#: config/module.php:16 config/module.php:17
+msgid "Guest book"
+msgstr "Livre d'or / témoignages"
+
+#: config/page.php:26
+msgid "Index page"
+msgstr "Page Index"
+
+#: config/page.php:32 config/permission.php:24
+msgid "Submit page"
+msgstr "Soumettre la page"
+
+#: config/permission.php:17
+msgid "Global public resource"
+msgstr "Ressource publique Globale"
