@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pi module\n"
-"POT-Creation-Date: 2017-05-28 13:16+0200\n"
+"POT-Creation-Date: 2017-06-10 11:10+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Pi\n"
@@ -15,8 +15,8 @@ msgstr ""
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: config/block.php:16 config/navigation.php:16 config/page.php:17
-#: config/permission.php:34
+#: config/block.php:16 config/navigation.php:16 config/navigation.php:25
+#: config/page.php:17 config/permission.php:34
 msgid "List of texts"
 msgstr "Liste des témoignages postés"
 
@@ -72,11 +72,15 @@ msgstr "Description page index"
 msgid "Guest book"
 msgstr "Livre d'or / témoignages"
 
-#: config/page.php:26
+#: config/navigation.php:34
+msgid "New text"
+msgstr "Nouveau texte"
+
+#: config/page.php:25
 msgid "Index page"
 msgstr "Page Index"
 
-#: config/page.php:32 config/permission.php:24
+#: config/page.php:31 config/permission.php:24
 msgid "Submit page"
 msgstr "Soumettre la page"
 

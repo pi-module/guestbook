@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pi module\n"
-"POT-Creation-Date: 2017-05-28 13:16+0200\n"
+"POT-Creation-Date: 2017-06-10 11:10+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Pi\n"
@@ -15,33 +15,33 @@ msgstr ""
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: src/Controller/Admin/ListController.php:93
+#: src/Controller/Admin/ListController.php:109
 msgid "Text data saved successfully."
 msgstr "Les données saisies ont été enregistrées avec succès."
 
-#: src/Controller/Admin/ListController.php:105
+#: src/Controller/Admin/ListController.php:128
 msgid "Manage text"
 msgstr "Gérer les textes"
 
-#: src/Controller/Admin/ListController.php:124
+#: src/Controller/Admin/ListController.php:147
 #, php-format
 msgid "%s text accept successfully"
 msgstr "Le témoignage %s a été validé avec succès"
 
-#: src/Controller/Admin/ListController.php:129
+#: src/Controller/Admin/ListController.php:152
 #, php-format
 msgid "Error in accept %s text"
 msgstr "Erreur lors de la validation du texte %s"
 
-#: src/Controller/Admin/ListController.php:135
+#: src/Controller/Admin/ListController.php:158
 msgid "Please select text"
 msgstr "Merci de sélectionner le témoignage"
 
-#: src/Controller/Front/SubmitController.php:53
+#: src/Controller/Front/SubmitController.php:54
 msgid "Your text submitd and will be publish after review"
 msgstr "Votre témoignage a été soumis et sera publié après validation"
 
-#: src/Controller/Front/SubmitController.php:71
+#: src/Controller/Front/SubmitController.php:72
 msgid "Submit new text"
 msgstr "Soumettre un nouveau texte"
 
@@ -57,39 +57,50 @@ msgstr "Nom"
 msgid "Text"
 msgstr "Texte"
 
-#: src/Form/SubmitForm.php:117 template/front/list.phtml:22
+#: src/Form/SubmitForm.php:105
+msgid "Create time"
+msgstr "Date création"
+
+#: src/Form/SubmitForm.php:130 template/front/list.phtml:22
 #: template/front/list.phtml:25
 msgid "Submit"
 msgstr "Soumettre"
 
-#: template/admin/list-index.phtml:10 template/front/list.phtml:19
+#: template/admin/list-index.phtml:11 template/front/list.phtml:19
 msgid "List of texts"
 msgstr "Liste des témoignages"
 
-#: template/admin/list-index.phtml:13
-msgid "ID"
-msgstr "ID"
-
-#: template/admin/list-index.phtml:14
-msgid "Information"
-msgstr "Contenu"
-
-#: template/admin/list-index.phtml:15
-msgid "Action"
-msgstr "Action"
-
-#: template/admin/list-index.phtml:36 template/admin/list-index.phtml:38
+#: template/admin/list-index.phtml:33 template/admin/list-index.phtml:35
 msgid "Edit"
 msgstr "Editer"
 
-#: template/admin/list-index.phtml:44 template/admin/list-index.phtml:68
+#: template/admin/list-index.phtml:40 template/admin/list-index.phtml:69
 msgid "Reject"
 msgstr "Rejeter"
 
-#: template/admin/list-index.phtml:49 template/admin/list-index.phtml:73
+#: template/admin/list-index.phtml:45 template/admin/list-index.phtml:74
 msgid "Accept"
 msgstr "Valider"
 
-#: template/admin/list-index.phtml:62
+#: template/admin/list-index.phtml:56
+msgid ""
+"No one still send any feedback from your website, please wait from people to "
+"send feedback, or if you have feedback from other source , you can add it "
+"manually on system"
+msgstr ""
+"Personne n'a encore laissé de feedback sur votre site, attendez un peu ou si "
+"vous avez d'anciens avis d'autres sources, vous pouvez les ajouter "
+"manuellement"
+
+#: template/admin/list-index.phtml:63
 msgid "Accept text in process"
 msgstr "Validation du texte en cours"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Information"
+#~ msgstr "Contenu"
+
+#~ msgid "Action"
+#~ msgstr "Action"
