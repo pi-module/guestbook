@@ -7,54 +7,55 @@ $this->jQuery();
 $this->js($this->assetModule('script/system-msg.js', 'system'));
 ?>
 <div class="clearfix">
-    <h3><?php _e('List of texts'); ?></h3>
-    <table id="text-list" class="table table-striped table-bordered table-condensed">
-        <tr>
-            <th><?php _e('ID'); ?></th>
-            <th><?php _e('Information'); ?></th>
-            <th><?php _e('Action'); ?></th>
-        </tr>
-        <?php foreach ($list as $text) { ?>
-            <?php
-            if ($text['status'] == 1) {
-                $labelIdClass = 'label-success';
-            } else {
-                $labelIdClass = 'label-warning';
-            }
-            ?>
-            <tr>
-                <td><span
-                        class="label <?php echo $labelIdClass; ?>"><?php echo $this->escape($text['id']); ?></span>
-                </td>
-                <td>
-                    <p><?php echo $this->escape($text['title']); ?></p>
-                    <div class="clearfix">
+    <?php if (!empty($list)) { ?>
+        <h3><?php _e('List of texts'); ?></h3>
+        <div id="text-list" class="clearfix media-list">
+            <?php foreach ($list as $text) { ?>
+                <div class="media">
+                    <div class="media-left col-md-1 text-center">
+                        <?php echo $text['avatar']; ?>
+                    </div>
+                    <div class="media-body col-md-9">
+                        <div class="clearfix">
+                            <h4 class="media-heading pull-left">
+                                <?php echo $this->escape($text['name']); ?>
+                            </h4>
+                            <div class="media-heading-dot pull-left">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-heading-time pull-left">
+                                <?php echo $this->escape($text['time_create_view']); ?>
+                            </div>
+                        </div>
                         <?php echo $text['text_description']; ?>
                     </div>
-                </td>
-                <td class="text-action">
-                    <a class="btn btn-primary btn-xs" title="<?php _e('Edit'); ?>"
-                       href="<?php echo $this->url('', array('action' => 'update', 'id' => $text['id'])); ?>"><i
-                            class="fa fa-edit"></i> <?php _e('Edit'); ?></a>
-
-                    <?php if ($text['status'] == 1) { ?>
-                        <button id="button-<?php echo $text['id']; ?>" type="button"
-                                class="btn btn-warning btn-xs" data-toggle="button"
-                                data-link="<?php echo $this->url('', array('action' => 'accept', 'id' => $text['id'], 'status' => '2')); ?>">
-                            <i class="fa fa-trash-o"></i> <?php _e('Reject'); ?></button>
-                    <?php } elseif (in_array($text['status'], array(2, 3, 4))) { ?>
-                        <button id="button-<?php echo $text['id']; ?>" type="button"
-                                class="btn btn-success btn-xs" data-toggle="button"
-                                data-link="<?php echo $this->url('', array('action' => 'accept', 'id' => $text['id'], 'status' => '1')); ?>">
-                            <i class="fa fa-check"></i> <?php _e('Accept'); ?></button>
-                    <?php } ?>
-                </td>
-            </tr>
-        <?php } ?>
-    </table>
-    <div class="paginator">
-        <?php echo $this->paginationControl($paginator, 'Sliding', 'paginator'); ?>
-    </div>
+                    <div class="text-action col-md-2">
+                        <a class="btn btn-primary btn-xs" title="<?php _e('Edit'); ?>"
+                           href="<?php echo $this->url('', array('action' => 'update', 'id' => $text['id'])); ?>"><i
+                                    class="fa fa-edit"></i> <?php _e('Edit'); ?></a>
+                        <?php if ($text['status'] == 1) { ?>
+                            <button id="button-<?php echo $text['id']; ?>" type="button"
+                                    class="btn btn-warning btn-xs" data-toggle="button"
+                                    data-link="<?php echo $this->url('', array('action' => 'accept', 'id' => $text['id'], 'status' => '2')); ?>">
+                                <i class="fa fa-trash-o"></i> <?php _e('Reject'); ?></button>
+                        <?php } elseif (in_array($text['status'], array(2, 3, 4))) { ?>
+                            <button id="button-<?php echo $text['id']; ?>" type="button"
+                                    class="btn btn-success btn-xs" data-toggle="button"
+                                    data-link="<?php echo $this->url('', array('action' => 'accept', 'id' => $text['id'], 'status' => '1')); ?>">
+                                <i class="fa fa-check"></i> <?php _e('Accept'); ?></button>
+                        <?php } ?>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="paginator">
+            <?php echo $this->paginationControl($paginator, 'Sliding', 'paginator'); ?>
+        </div>
+    <?php } else { ?>
+        <div class="alert alert-danger" role="alert">
+            <?php _e('No one still send any feedback fro your website, please wait to people send feedback, or is you have feedback from other source , you can add it manually on system'); ?>
+        </div>
+    <?php } ?>
 </div>
 <script type="text/javascript">
     (function ($) {

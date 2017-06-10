@@ -97,6 +97,19 @@ class SubmitForm extends BaseForm
                 'required' => true,
             )
         ));
+        // time_create
+        if ($this->option['side'] == 'admin') {
+            $this->add(array(
+                'name' => 'time_create',
+                'options' => array(
+                    'label' => __('Create time'),
+                ),
+                'attributes' => array(
+                    'type' => 'text',
+                    'required' => true,
+                )
+            ));
+        }
         // captcha
         if (Pi::user()->getId() == 0) {
             $captchaMode = $this->option['config']['captcha'];

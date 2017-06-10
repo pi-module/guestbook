@@ -20,6 +20,26 @@ return array(
             'route' => 'admin',
             'controller' => 'list',
             'action' => 'index',
+            'pages' => array(
+                'attribute' => array(
+                    'label' => _a('List of texts'),
+                    'permission' => array(
+                        'resource' => 'list',
+                    ),
+                    'route' => 'admin',
+                    'controller' => 'list',
+                    'action' => 'index',
+                ),
+                'position' => array(
+                    'label' => _a('New text'),
+                    'permission' => array(
+                        'resource' => 'list',
+                    ),
+                    'route' => 'admin',
+                    'controller' => 'list',
+                    'action' => 'update',
+                ),
+            ),
         ),
     ),
 );

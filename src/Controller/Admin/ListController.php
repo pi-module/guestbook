@@ -37,7 +37,12 @@ class ListController extends ActionController
         // Make list
         foreach ($rowset as $row) {
             $list[$row->id] = $row->toArray();
+            $list[$row->id]['time_create_view'] = _date($row->time_create);
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
+            $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'normal' , array(
+                'alt' => $row->name,
+                'class' => 'img-circle'
+            ));
         }
         // Set paginator
         $count = array('count' => new Expression('count(*)'));
@@ -66,23 +71,34 @@ class ListController extends ActionController
     {
         // Get id
         $id = $this->params('id');
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
+        // Set option
+        $option = array(
+            'config' => $config,
+            'side' => 'admin',
+        );
         // Set form
-        $form = new SubmitForm('submit');
+        $form = new SubmitForm('submit', $option);
         $form->setAttribute('enctype', 'multipart/form-data');
         if ($this->request->isPost()) {
             $data = $this->request->getPost();
-            $form->setInputFilter(new SubmitFilter);
+            $form->setInputFilter(new SubmitFilter($option));
             $form->setData($data);
             if ($form->isValid()) {
                 $values = $form->getData();
-                // Save values
-                if (!empty($values['id'])) {
-                    // Set values
+                // Set values
+                if (empty($values['id'])) {
                     $values['status'] = 1;
                     $values['uid'] = Pi::user()->getId();
                     $values['ip'] = Pi::user()->getIp();
-                    $values['time_create'] = time();
-                    // find
+                    //$values['time_create'] = time();
+                }
+                // Set time
+                $values['time_create'] = strtotime($values['time_create']);
+                // Save values
+                if (!empty($values['id'])) {
                     $row = $this->getModel('text')->find($values['id']);
                 } else {
                     $row = $this->getModel('text')->createRow();
@@ -92,12 +108,19 @@ class ListController extends ActionController
                 // Jump
                 $message = __('Text data saved successfully.');
                 $this->jump(array('action' => 'index'), $message);
+
             }
         } else {
             if ($id) {
-                $position = $this->getModel('text')->find($id)->toArray();
-                $form->setData($position);
+                $text = $this->getModel('text')->find($id)->toArray();
+                $text['time_create'] = date("Y-m-d H:i:s", $text['time_create']);
+
+
+            } else {
+                $text = array();
+                $text['time_create'] = date("Y-m-d H:i:s", time());
             }
+            $form->setData($text);
         }
         // Set view
         $this->view()->setTemplate('list-update');

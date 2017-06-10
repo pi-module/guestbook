@@ -18,7 +18,6 @@ return array(
             'controller' => 'list',
             'permission' => 'list',
         ),
-        
     ),
     // Front section
     'front' => array(

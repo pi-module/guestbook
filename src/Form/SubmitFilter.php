@@ -79,5 +79,20 @@ class SubmitFilter extends InputFilter
                 ),
             ),
         ));
+        // time_create
+        if ($option['side'] == 'admin') {
+            $this->add(array(
+                'name' => 'time_create',
+                'required' => true,
+                'filters' => array(
+                    array(
+                        'name' => 'StringTrim',
+                    ),
+                ),
+                'validators' => array(
+                    new \Module\Guestbook\Validator\TimeCreate,
+                ),
+            ));
+        }
     }
 }

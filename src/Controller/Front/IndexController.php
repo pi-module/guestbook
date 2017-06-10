@@ -66,6 +66,7 @@ class IndexController extends ActionController
         // Set option
         $option = array(
             'config' => $config,
+            'side' => 'front',
         );
         // Set form
         $form = new SubmitForm('submit', $option);
