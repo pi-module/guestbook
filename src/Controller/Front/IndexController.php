@@ -59,7 +59,7 @@ class IndexController extends ActionController
             'route' => $this->getEvent()->getRouteMatch()->getMatchedRouteName(),
             'params' => array_filter(array(
                 'module' => $this->getModule(),
-                'controller' => 'list',
+                'controller' => 'index',
                 'action' => 'index',
             )),
         ));
