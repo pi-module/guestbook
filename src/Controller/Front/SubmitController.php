@@ -41,6 +41,9 @@ class SubmitController extends ActionController
             $form->setData($data);
             if ($form->isValid()) {
                 $values = $form->getData();
+                // Check XSS
+                $values['text_description'] = Pi::service('security')->filter($values['text_description']);
+                $values['text_description'] = _escape($values['text_description']);
                 // Set values
                 $values['status'] = 2;
                 $values['uid'] = $uid;
