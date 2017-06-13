@@ -37,7 +37,7 @@ class ListController extends ActionController
         // Make list
         foreach ($rowset as $row) {
             $list[$row->id] = $row->toArray();
-            $list[$row->id]['time_create_view'] = _date($row->time_create);
+            $list[$row->id]['time_create_view'] = _date($row->time_create, array('pattern' => 'yyyy/MM/dd'));
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
             $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'normal' , array(
                 'alt' => $row->name,
@@ -113,12 +113,10 @@ class ListController extends ActionController
         } else {
             if ($id) {
                 $text = $this->getModel('text')->find($id)->toArray();
-                $text['time_create'] = date("Y-m-d H:i:s", $text['time_create']);
-
-
+                $text['time_create'] = date("Y/m/d", $text['time_create']);
             } else {
                 $text = array();
-                $text['time_create'] = date("Y-m-d H:i:s", time());
+                $text['time_create'] = date("Y/m/d", time());
             }
             $form->setData($text);
         }

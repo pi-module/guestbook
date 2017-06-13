@@ -25,7 +25,7 @@ class TimeCreate extends AbstractValidator
      * @var array
      */
     protected $messageTemplates = array(
-        self::TAKEN => 'Time format is not valid, true format is : Y-m-d H:i:s , for example : 2017-06-12 08:25:00',
+        self::TAKEN => 'Time format is not valid, true format is : Y/m/d , for example : 2017/06/12',
     );
 
     protected $options = array();
@@ -41,7 +41,7 @@ class TimeCreate extends AbstractValidator
     {
         $this->setValue($value);
         if (null !== $value) {
-            $format = 'Y-m-d H:i:s';
+            $format = 'Y/m/d';
             $date = DateTime::createFromFormat($format, $value);
             if (!$date || $date->format($format) != $value) {
                 $this->error(static::TAKEN);

@@ -101,12 +101,21 @@ class SubmitForm extends BaseForm
         if ($this->option['side'] == 'admin') {
             $this->add(array(
                 'name' => 'time_create',
+                'type' => 'datepicker',
                 'options' => array(
                     'label' => __('Create time'),
+                    'datepicker' => array(
+                        'format' => 'yyyy/mm/dd',
+                        'autoclose' => true,
+                        'todayBtn' => true,
+                        'todayHighlight' => true,
+                        'weekStart' => 1,
+                        'zIndexOffset' => 10000
+                    ),
                 ),
                 'attributes' => array(
-                    'type' => 'text',
                     'required' => true,
+                    'class' => 'guestbook-time',
                 )
             ));
         }

@@ -40,7 +40,7 @@ class IndexController extends ActionController
         // Make list
         foreach ($rowset as $row) {
             $list[$row->id] = $row->toArray();
-            $list[$row->id]['time_create_view'] = _date($row->time_create);
+            $list[$row->id]['time_create_view'] = _date($row->time_create, array('pattern' => 'yyyy/MM/dd'));
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
             $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'normal' , array(
                 'alt' => $row->name,
