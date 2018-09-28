@@ -1,10 +1,10 @@
 <?php
 /**
- * Pi Engine (http://pialog.org)
+ * Pi Engine (http://piengine.org)
  *
- * @link            http://code.pialog.org for the Pi Engine source repository
- * @copyright       Copyright (c) Pi Engine http://pialog.org
- * @license         http://pialog.org/license.txt New BSD License
+ * @link            http://code.piengine.org for the Pi Engine source repository
+ * @copyright       Copyright (c) Pi Engine http://piengine.org
+ * @license         http://piengine.org/license.txt New BSD License
  */
 
 /**
@@ -44,7 +44,7 @@ class IndexController extends ActionController
             $list[$row->id]['text_description'] = Pi::service('markup')->render($list[$row->id]['text_description'], 'html', 'text');
             $list[$row->id]['avatar'] = Pi::service('user')->avatar($row->uid, 'normal' , array(
                 'alt' => $row->name,
-                'class' => 'img-circle'
+                'class' => 'rounded-circle'
             ));
         }
         // Set paginator
