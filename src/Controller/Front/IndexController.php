@@ -17,7 +17,7 @@ use Pi\Mvc\Controller\ActionController;
 use Pi\Paginator\Paginator;
 use Module\Guestbook\Form\SubmitForm;
 use Module\Guestbook\Form\SubmitFilter;
-use Zend\Db\Sql\Predicate\Expression;
+use Laminas\Db\Sql\Predicate\Expression;
 
 class IndexController extends ActionController
 {
