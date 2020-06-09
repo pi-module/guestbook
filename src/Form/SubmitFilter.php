@@ -13,7 +13,7 @@
 namespace Module\Guestbook\Form;
 
 use Pi;
-use Zend\InputFilter\InputFilter;
+use Laminas\InputFilter\InputFilter;
 use Module\System\Validator\UserEmail as UserEmailValidator;
 
 class SubmitFilter extends InputFilter

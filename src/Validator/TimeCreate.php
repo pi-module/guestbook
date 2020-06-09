@@ -14,7 +14,7 @@
 namespace Module\Guestbook\Validator;
 
 use Pi;
-use Zend\Validator\AbstractValidator;
+use Laminas\Validator\AbstractValidator;
 use DateTime;
 
 class TimeCreate extends AbstractValidator
